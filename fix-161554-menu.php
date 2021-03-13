@@ -7,7 +7,7 @@
  * Author URI:      https://fixonweb.com.br
  * Text Domain:     fix-161554-menu
  * Domain Path:     /languages
- * Version:         0.1.0
+ * Version:         0.1.1
  *
  * @package         Fix_161554_Menu
  */
@@ -23,11 +23,19 @@ $fix1608230887_check        = Puc_v4_Factory::buildUpdateChecker($fix1608230887_
 function fix_161554_wp_head() {
     ?>
         <style>
+            .fixonmobile {
+                display: none;
+            }
             .fixoffdesktop {
                 display: none;
             }
             .fixondesktop {
                 display: none;
+            }
+            @media (max-width: 600px) {
+                .fixonmobile {
+                    display: block;
+                }
             }
 
             #fixmnutop {
